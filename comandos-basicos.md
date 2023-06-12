@@ -86,8 +86,16 @@ Com esse comando, nós fazemos o instantâneo do estado atual dos nossos arquivo
 
 Um comportamento de padronização de mensagens de commit sugere que a primeira linha de um commit seja a breve descrição da alteração realizada. Essa linha não deve ter mais que 50 caracteres. Ela deve ser seguida por uma linha em branco e, caso o commit tenha mais linhas, elas não devem ultrapassar os 72 caracteres.
 
+O ideal é sempre realizar pequenos commits, para registrar as alterações realizadas e facilitar a recuperação de estados anteriores.
+
 <br />
 
 ## git log
 
 O comando `git log` exibe informações sobre os commits anteriores. Ele exibe uma lista com os nomes dos autores, as datas de realização, os comentários de identificação e apronta qual é o commit `HEAD` do processo.
+
+<br />
+
+## git diff
+
+Esse comando exibe as diferenças, se houverem, entre os arquivos da árvore de trabalho e os arquivos das últimas adições preparadas no último `git add`. Para comparar essas alterações com o último commit, use `$ git diff HEAD`.
