@@ -84,7 +84,10 @@ O comando `git add` é utilizado para adicionar os arquivos que irão fazer part
 
 Com esse comando, nós fazemos o instantâneo do estado atual dos nossos arquivos. Além do estado atual da aplicação, o commit armazena dados do autor do commit, a data da realização e os comentários feitos. Para fazer o commit acompanhado de comentários, utilizamos a flag `-m`. Exemplo: `$ git commit -m 'configuração inicial`.
 
+Um comportamento de padronização de mensagens de commit sugere que a primeira linha de um commit seja a breve descrição da alteração realizada. Essa linha não deve ter mais que 50 caracteres. Ela deve ser seguida por uma linha em branco e, caso o commit tenha mais linhas, elas não devem ultrapassar os 72 caracteres.
+
 <br />
 
 ## git log
 
+O comando `git log` exibe informações sobre os commits anteriores. Ele exibe uma lista com os nomes dos autores, as datas de realização, os comentários de identificação e apronta qual é o commit `HEAD` do processo.
