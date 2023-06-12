@@ -90,6 +90,18 @@ O ideal é sempre realizar pequenos commits, para registrar as alterações real
 
 <br />
 
+### Corrigindo um commit
+
+Utilizamos a opção `--amend` para corrigirmos um commit.Caso, por exemplo tenhamos feito um commit com um arquivo que tenha um pequeno erro. Podemos corrigir esse erro e *reutilizar* o último commit feito.
+
+Se utilizarmos a opção `--no-edit`, indicamos que manteremos a mesma mensagem de commit. Podemos com o *amend* editar também a mensagem do commit.
+
+``` bash
+git commit --amend --no-edit
+```
+
+<br />
+
 ## git log
 
 O comando `git log` exibe informações sobre os commits anteriores. Ele exibe uma lista com os nomes dos autores, as datas de realização, os comentários de identificação e apronta qual é o commit `HEAD` do processo.
@@ -98,4 +110,16 @@ O comando `git log` exibe informações sobre os commits anteriores. Ele exibe u
 
 ## git diff
 
-Esse comando exibe as diferenças, se houverem, entre os arquivos da árvore de trabalho e os arquivos das últimas adições preparadas no último `git add`. Para comparar essas alterações com o último commit, use `$ git diff HEAD`.
+Esse comando exibe as diferenças, se houverem, entre os arquivos da árvore de trabalho e os arquivos das últimas adições preparadas no último `git add`. Para comparar essas alterações com o último commit, use `$  git diff HEAD`.
+
+<br />
+
+## git checkout
+
+O `git checkout` é um comando de vários usos. Um deles é o de recuperação de arquivos excluídos por acidente. Podemos fazê-lo da seguinte forma:
+
+``` bash
+git checkout -- <nome_do_arquivo>
+```
+
+O sinal `--` é necessário para que o git evite uma possível confusão com uma branch de mesmo nome.
