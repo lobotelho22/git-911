@@ -137,6 +137,14 @@ git checkout -- <nome_do_arquivo>
 
 Na sequência dos comando acima, removemos o preparo da exclusão do arquivo, feita com o `git rm` e recuperamos a versão dele excluída do git. Na sequência, o `checkout` faz a recuperação da última versão do arquivo para o disco.
 
+Podemos, também, utilizar esse comando para removermos um commit. Se for o caso de excluir o commit mais recente, executamos:
+
+``` bash
+git reset --hard HEAD^
+```
+
+Há alguns padrões para essa operação. O default é o `--mixed`, que redefine o índice sem alterar a árvore de trabalho e que também pode mover o `HEAD` para um commit escpecificado pelo usuário. Podemos utilizar a opção `--sort` para movermos o `HEAD`, deixando tudo intacto, com status de alterações pendentes de um commit. A opção `--hard` utilizada no exemplo acima altera índice e árvore de trabalho, para que correspondam ao commit esfecificado e tudo o mais é descartado.
+
 <br />
 
 ## git revert
