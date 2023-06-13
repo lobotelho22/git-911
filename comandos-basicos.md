@@ -123,3 +123,26 @@ git checkout -- <nome_do_arquivo>
 ```
 
 O sinal `--` é necessário para que o git evite uma possível confusão com uma branch de mesmo nome.
+
+<br />
+
+## git reset
+
+Esse comando remove o preparo de alterações em uma branch ou arquivo. No caso de um arquivo que tenha sido exlcuído do disco e do git, com um comando `git rm <nome_do_arquivo>`, por exemlo, podemos recuperar o arquivo da seguinte forma:
+
+``` bash
+git reset HEAD <nome_do_arquivo>
+git checkout -- <nome_do_arquivo>
+```
+
+Na sequência dos comando acima, removemos o preparo da exclusão do arquivo, feita com o `git rm` e recuperamos a versão dele excluída do git. Na sequência, o `checkout` faz a recuperação da última versão do arquivo para o disco.
+
+<br />
+
+## git revert
+
+O comando `git revert` faz a reversão de commits. Ele funciona fazendo um *novo commit* que *cancela* as alterações do último commit realizado. Para isso, executamos o comando:
+
+``` bash
+git reset HEAD
+```
