@@ -154,3 +154,27 @@ O comando `git revert` faz a reversão de commits. Ele funciona fazendo um *novo
 ``` bash
 git reset HEAD
 ```
+
+## git clone
+
+Esse comando realiza a cópia do conteúdo de um repositório git para armazená-lo em uma outra máquina. O git clone precisa de um caminho para os arquivos, que pode ser uma URL ou um SSH
+
+## git pull
+
+Ao clonar um repositório remoto, o git cria uma referência a ele, utilizando o nome `origin`. A operação do `git pull` é atualizar o repositório local com o repositório de origem. É uma operação que aponta do remoto até a origem.
+
+## git request-pull
+
+O comando efetua uma solicitação para realizar o pull de uma branch indicada. Por exemplo:
+
+``` bash
+git request-pull -p origin/main
+```
+
+É uma linha de código muito utilizada quando trabalhamos em grupo em um projeto git de terceiros. Nela estamos solicitando permissão de atualização na branch `main` no repositório remoto (`origin`), copiando a árvore de trabalho alterada por nós.
+
+<br />
+
+## git remote
+
+Esse comando é utilizado para configurar um repositório como repositório remoto. Esse repositório é que será utilizado por uma equipe, para ser clonado e atualizado via `git pull` ou `git request-pull`.
